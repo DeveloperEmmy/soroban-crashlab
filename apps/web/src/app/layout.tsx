@@ -88,7 +88,15 @@ export default function RootLayout({
         </header>
         <main className="flex-1 flex flex-col">{children}</main>
         <footer className="border-t border-black/8 dark:border-white/15 p-6 text-center text-sm text-zinc-500">
-          Built for Stellar &middot; Soroban Ecosystem
+          Built for Stellar &middot; Soroban Ecosystem &middot;{" "}
+          <a
+            href="https://github.com/SorobanCrashLab/soroban-crashlab/milestone/1"
+            className="underline hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Roadmap
+          </a>
         </footer>
       </body>
     </html>
