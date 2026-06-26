@@ -26,9 +26,11 @@ export default function DarkModeToggle() {
 
   useEffect(() => {
     const initial = readTheme();
-    setTheme(initial);
     applyTheme(initial);
-    const timer = window.setTimeout(() => setMounted(true), 0);
+    const timer = window.setTimeout(() => {
+      setTheme(initial);
+      setMounted(true);
+    }, 0);
     return () => window.clearTimeout(timer);
   }, []);
 
