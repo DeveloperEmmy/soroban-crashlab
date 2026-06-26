@@ -17,8 +17,6 @@ export const GET = withRouteErrorHandling('GET /api/runs', async (request: Reque
         const data = await res.json();
         return successResponse(data);
       }
-    } catch {
-      return errorResponse('Backend unavailable', status.serviceUnavailable);
     } catch (error) {
       logger.error('GET /api/runs upstream fetch failed', { error });
       return NextResponse.json(
@@ -36,6 +34,4 @@ export const GET = withRouteErrorHandling('GET /api/runs', async (request: Reque
   const { buildMockRuns } = await import('@/app/mockRuns');
   const runs = buildMockRuns();
   return successResponse({ runs }, { total: runs.length });
-}
-  return NextResponse.json({ runs, total: runs.length });
 });

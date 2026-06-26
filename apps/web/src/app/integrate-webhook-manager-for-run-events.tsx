@@ -2,7 +2,6 @@
 
 import React, { useState, useEffect, useCallback } from 'react';
 import { WebhookManager, WebhookConfig as WebhookManagerConfig, RunEventType } from './webhook-manager';
-import { FetchWebhookDeliveryAdapter } from '../lib/webhook-delivery-worker';
 
 type WebhookConfig = {
   id: string;
