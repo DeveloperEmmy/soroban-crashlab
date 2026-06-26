@@ -538,7 +538,7 @@ describe('Dashboard Filters Integration in filteredRuns', () => {
       }, { timeout: 2000 });
 
       // Set a search term that matches no runs
-      const setSearchButton = screen.getByTestId('set-search-filter');
+      screen.getByTestId('set-search-filter');
       // Modify the mock to use a non-matching term
       const dashboardFilters = screen.getByTestId('dashboard-filters');
       const customButton = document.createElement('button');
